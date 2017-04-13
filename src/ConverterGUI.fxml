@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.main_Controller">
+   <children>
+      <TextField id="TF_Display" fx:id="TF_Display" layoutX="47.0" layoutY="22.0" prefHeight="60.0" prefWidth="514.0">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Converted Value" />
+         </tooltip></TextField>
+      <TextField id="TF_Input" fx:id="TF_Input" layoutX="49.0" layoutY="114.0" prefHeight="60.0" prefWidth="514.0" promptText="Enter number here...">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font></TextField>
+      <TextField id="TF_ASMInput" fx:id="TF_ASMInput" layoutX="51.0" layoutY="299.0" prefHeight="60.0" prefWidth="378.0" promptText="Enter basic calculation">
+         <font>
+            <Font name="Segoe UI" size="28.0" />
+         </font></TextField>
+      <ComboBox id="CB_Source" fx:id="CB_Source" layoutX="51.0" layoutY="214.0" prefHeight="45.0" prefWidth="150.0" promptText="Source Base">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Binary" />
+          <String fx:value="Hexadecimal" />
+          <String fx:value="Decimal" />
+        </FXCollections>
+      </items>
+         <tooltip>
+            <Tooltip text="Base you want to convert from" />
+         </tooltip>
+    </ComboBox>
+      <ComboBox id="CB_Destination" fx:id="CB_Destination" layoutX="225.0" layoutY="214.0" prefHeight="45.0" prefWidth="150.0" promptText="Destination">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Binary" />
+               <String fx:value="Hexadecimal" />
+               <String fx:value="Decimal" />
+            </FXCollections>
+         </items>
+         <tooltip>
+            <Tooltip text="Base you want to convert to" />
+         </tooltip>
+      </ComboBox>
+      <Button id="B_Convert" fx:id="B_Convert" layoutX="414.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#ConvertClick" prefHeight="45.0" prefWidth="150.0" text="Convert">
+         <font>
+            <Font name="Segoe UI" size="24.0" />
+         </font>
+      </Button>
+      <Button id="B_ToASM" fx:id="B_ToASM" layoutX="451.0" layoutY="307.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="126.0" text="To ASM">
+         <font>
+            <Font name="Segoe UI" size="24.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Not yet implemented!" />
+         </tooltip>
+      </Button>
+      
+   </children>
+</Pane>
